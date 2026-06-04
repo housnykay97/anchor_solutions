@@ -65,7 +65,7 @@
         .hero-section {
             background: linear-gradient(135deg, var(--primary-navy) 0%, #1E293B 100%);
             color: #ffffff;
-            padding: 160px 0 100px 0;
+            padding: 100px 0 80px 0;
             position: relative;
             overflow: hidden;
         }
@@ -219,12 +219,11 @@
                         and specific goals.</p>
                     <div class="d-flex flex-wrap gap-3">
                         <a href="#contact" class="btn btn-accent btn-lg">Get a Free Consultation</a>
-                        <!-- FIND THIS LINE IN THE HERO SECTION OF index.html -->
                         <a href="solutions.html" class="btn btn-outline-light btn-lg">Explore Solutions</a>
                     </div>
                 </div>
                 <div class="col-lg-5 text-center d-none d-lg-block">
-                    <i class="fa-solid fa-laptop-code text-info opacity-25" style="font-size: 16rem;"></i>
+                    <img src="comp.png" alt="computer">
                 </div>
             </div>
         </div>
@@ -369,24 +368,27 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-7">
                     <div class="bg-white p-5 border rounded-3">
                         <h4 class="fw-bold text-dark mb-4">Request a Consultation</h4>
-                        <form action="#" method="POST">
+                        <form onsubmit="sendToWhatsApp(event)">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <label class="form-label font-weight-bold small text-uppercase">Your Name</label>
-                                    <input type="text" class="form-control" placeholder="Enter full name" required>
+                                    <input type="text" id="name" class="form-control" placeholder="Enter full name"
+                                        required>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label font-weight-bold small text-uppercase">Business
                                         Email</label>
-                                    <input type="email" class="form-control" placeholder="name@company.com" required>
+                                    <input type="email" id="email" class="form-control" placeholder="name@company.com"
+                                        required>
                                 </div>
                                 <div class="col-12">
                                     <label class="form-label font-weight-bold small text-uppercase">Project
                                         Focus</label>
-                                    <select class="form-select form-control">
+                                    <select id="focus" class="form-select form-control">
                                         <option>Custom Web Application</option>
                                         <option>Business Automation / SaaS</option>
                                         <option>API & Payment Integration</option>
@@ -396,7 +398,7 @@
                                 <div class="col-12">
                                     <label class="form-label font-weight-bold small text-uppercase">Project
                                         Overview</label>
-                                    <textarea class="form-control" rows="4"
+                                    <textarea id="overview" class="form-control" rows="4"
                                         placeholder="Briefly describe your requirements or operational bottleneck..."
                                         required></textarea>
                                 </div>
@@ -407,6 +409,31 @@
                         </form>
                     </div>
                 </div>
+
+                <script>
+                    function sendToWhatsApp(e) {
+                        e.preventDefault(); // stop form from reloading page
+
+                        let name = document.getElementById('name').value;
+                        let email = document.getElementById('email').value;
+                        let focus = document.getElementById('focus').value;
+                        let overview = document.getElementById('overview').value;
+
+                        let yourNumber = '254700539097';
+
+                        let message = `*New Inquiry - Anchor Solutions*%0A%0A` +
+                            `*Name:* ${name}%0A` +
+                            `*Email:* ${email}%0A` +
+                            `*Project Focus:* ${focus}%0A` +
+                            `*Overview:* ${overview}`;
+
+                        let url = `https://wa.me/${yourNumber}?text=${encodeURIComponent(message)}`;
+                        window.open(url, '_blank');
+                    }
+                </script>
+
+
+
             </div>
         </div>
     </section>
