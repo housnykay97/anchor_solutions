@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anchor Solutions | Software Development & Digital Transformation</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-navy: #0F172A;
+            /* Deep professional navy */
+            --secondary-slate: #334155;
+            /* Stable slate gray */
+            --accent-teal: #0EA5E9;
+            /* Modern technical teal */
+            --light-bg: #F8FAFC;
+            /* Clean off-white background */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--secondary-slate);
+            background-color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .navbar-brand span {
+            color: var(--accent-teal);
+        }
+
+        .nav-link {
+            color: #E2E8F0 !important;
+            font-weight: 500;
+            margin-left: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--accent-teal) !important;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, #1E293B 100%);
+            color: #ffffff;
+            padding: 160px 0 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: #ffffff;
+            clip-path: polygon(0 100%, 100% 100%, 100% 0);
+        }
+
+        .btn-accent {
+            background-color: var(--accent-teal);
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 6px;
+            border: none;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn-accent:hover {
+            background-color: #0284C7;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-light {
+            padding: 0.75rem 2rem;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        /* Section Global Settings */
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            font-weight: 700;
+            color: var(--primary-navy);
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-teal);
+        }
+
+        .bg-light-section {
+            background-color: var(--light-bg);
+        }
+
+        /* Feature & Service Cards */
+        .custom-card {
+            background: #ffffff;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            padding: 2.5rem 2rem;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .custom-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+            border-color: var(--accent-teal);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--accent-teal);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Contact Section styling */
+        .contact-info-box {
+            background-color: var(--primary-navy);
+            color: white;
+            border-radius: 8px;
+            padding: 3rem;
+        }
+
+        .form-control {
+            padding: 0.75rem 1rem;
+            border-color: #CBD5E1;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-teal);
+            box-shadow: 0 0 0 0.25rem rgba(14, 165, 233, 0.25);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-navy);
+            color: #94A3B8;
+            padding: 40px 0;
+            border-top: 1px solid #1E293B;
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="100">
+
+    <!-- NAVBAR -->
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fa-solid def fa-anchor me-2 text-info"></i>Anchor<span>Solutions</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Our Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#why-choose-us">Why Choose Us</a></li>
+                    <li class="nav-item"><a
+                            class="nav-link btn btn-accent text-white px-3 py-1 ms-lg-4 d-inline-block mt-2 mt-lg-0"
+                            href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <h1 class="display-4 fw-bold mb-3">We Build Software That Anchors Your Business Growth</h1>
+                    <p class="lead text-light opacity-75 mb-4">From local automated business tools to highly scalable
+                        corporate infrastructure, we build secure, robust digital products tailored to your market rules
+                        and specific goals.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#contact" class="btn btn-accent btn-lg">Get a Free Consultation</a>
+                        <a href="#services" class="btn btn-outline-light btn-lg">Explore Services</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center d-none d-lg-block">
+                    <i class="fa-solid fa-laptop-code text-info opacity-25" style="font-size: 16rem;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+    <section id="about">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="section-title">About Us</h2>
+                    <p class="lead mb-4">We are a dedicated software development partnership built on the core values of
+                        technical precision and structural reliability.</p>
+                    <p class="mb-4">At Anchor Solutions, we close the gap between complex technical engineering and
+                        real-world business outcomes. We understand that your software needs to be as stable as an
+                        anchor, yet flexible enough to scale dynamically. Whether optimizing processes for a growing
+                        local enterprise or designing a backend structure for large organizations, our engineering team
+                        builds for maximum efficiency, security, and market compliance.</p>
+                    <div class="row g-3">
+                        <div class="col-sm-6 d-flex align-items-center">
+                            <i class="fa-solid fa-check-circle text-info me-2 fs-5"></i> <span>Custom Engineering</span>
+                        </div>
+                        <div class="col-sm-6 d-flex align-items-center">
+                            <i class="fa-solid fa-check-circle text-info me-2 fs-5"></i> <span>Compliance Ready</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-light-section p-5 rounded-3 border">
+                        <h4 class="fw-bold mb-3 text-dark"><i class="fa-solid fa-bullseye text-info me-2"></i>Our
+                            Mission</h4>
+                        <p class="mb-4">To deliver high-performance, resilient digital infrastructure that acts as the
+                            bedrock for our clients' operational and commercial success.</p>
+                        <h4 class="fw-bold mb-3 text-dark"><i class="fa-solid fa-eye text-info me-2"></i>Our Vision</h4>
+                        <p class="mb-0">To become the region’s premier software architecture group, recognized for
+                            driving business transformation through bulletproof code and intentional design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR SERVICES SECTION -->
+    <section id="services" class="bg-light-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-10">
+                    <h2 class="section-title">Our Services</h2>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-md-4">
+                    <div class="custom-card">
+                        <i class="fa-solid fa-code card-icon"></i>
+                        <h4 class="fw-bold text-dark mb-3">Custom Web Applications</h4>
+                        <p class="mb-0">Tailor-made, responsive full-stack applications crafted specifically around your
+                            unique business operations and workflow requirements.</p>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="col-md-4">
+                    <div class="custom-card">
+                        <i class="fa-solid fa-gears card-icon"></i>
+                        <h4 class="fw-bold text-dark mb-3">Business Automation & SaaS</h4>
+                        <p class="mb-0">Eliminate manual processes. We build automated rental tracking, internal
+                            dashboards, and custom operational tools that clear bottlenecks.</p>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="col-md-4">
+                    <div class="custom-card">
+                        <i class="fa-solid fa-link card-icon"></i>
+                        <h4 class="fw-bold text-dark mb-3">API & Statutory Integrations</h4>
+                        <p class="mb-0">Seamless connectivity to critical external endpoints, handling local payment
+                            platforms, verification layers, and real-time computation engines securely.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE ANCHOR SOLUTIONS -->
+    <section id="why-choose-us">
+        <div class="container">
+            <div class="row text-center justify-content-center mb-5">
+                <div class="col-lg-8">
+                    <h2 class="section-title d-inline-block">Why Choose Anchor Solutions?</h2>
+                    <p class="lead mt-3">We don't just write code; we deploy production-grade software engineered
+                        specifically to solve commercial operational bottlenecks.</p>
+                </div>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="p-4">
+                        <i class="fa-solid fa-shield-halved text-info fs-1 mb-3"></i>
+                        <h5 class="fw-bold text-dark">Bulletproof Architecture</h5>
+                        <p>We avoid shortcuts. Our code is written following strict structural practices ensuring clean
+                            data models, security, and effortless maintainability.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4">
+                        <i class="fa-solid fa-scale-balanced text-info fs-1 mb-3"></i>
+                        <h5 class="fw-bold text-dark">Built to Scale</h5>
+                        <p>We build our logic with your trajectory in mind. The infrastructure we build for you today
+                            easily scales as you transition from local markets to enterprise demands.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4">
+                        <i class="fa-solid fa-handshake text-info fs-1 mb-3"></i>
+                        <h5 class="fw-bold text-dark">Local Compliance & Insight</h5>
+                        <p>We integrate deep knowledge of localized statutory regulations, logic loops, and native
+                            payment workflows right directly into your core backend systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT US SECTION -->
+    <section id="contact" class="bg-light-section">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <div class="contact-info-box d-flex flex-column h-100 justify-content-between">
+                        <div>
+                            <h3 class="fw-bold text-white mb-4">Let's Secure Your Digital Foundation</h3>
+                            <p class="text-light opacity-75 mb-5">Ready to streamline your systems or build a brand new
+                                software asset? Drop us a line, and let's map out your project details.</p>
+                        </div>
+                        <div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fa-solid fa-envelope text-info fs-5 me-3"></i>
+                                <span>info@anchorsolutions.co.ke</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-location-dot text-info fs-5 me-3"></i>
+                                <span>Nairobi, Kenya</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="bg-white p-5 border rounded-3">
+                        <h4 class="fw-bold text-dark mb-4">Request a Consultation</h4>
+                        <form action="#" method="POST">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label font-weight-bold small text-uppercase">Your Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter full name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label font-weight-bold small text-uppercase">Business
+                                        Email</label>
+                                    <input type="email" class="form-control" placeholder="name@company.com" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label font-weight-bold small text-uppercase">Project
+                                        Focus</label>
+                                    <select class="form-select form-control">
+                                        <option>Custom Web Application</option>
+                                        <option>Business Automation / SaaS</option>
+                                        <option>API & Payment Integration</option>
+                                        <option>Other / General Consultation</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label font-weight-bold small text-uppercase">Project
+                                        Overview</label>
+                                    <textarea class="form-control" rows="4"
+                                        placeholder="Briefly describe your requirements or operational bottleneck..."
+                                        required></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-accent btn-lg w-100">Send Inquiry</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container text-center text-md-between d-md-flex align-items-center justify-content-between">
+            <p class="mb-2 mb-md-0">&copy; 2026 Anchor Solutions. All rights reserved.</p>
+            <div class="d-flex gap-3 justify-content-center">
+                <span class="text-light opacity-50">Engineered for Scalability</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 Bundle JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
