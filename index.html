@@ -5,178 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anchor Solutions | Software Development & Digital Transformation</title>
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
-    <style>
-        :root {
-            --primary-navy: #0F172A;
-            /* Deep professional navy */
-            --secondary-slate: #334155;
-            /* Stable slate gray */
-            --accent-teal: #0EA5E9;
-            /* Modern technical teal */
-            --light-bg: #F8FAFC;
-            /* Clean off-white background */
-        }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--secondary-slate);
-            background-color: #ffffff;
-            scroll-behavior: smooth;
-        }
-
-        /* Navbar Styling */
-        .navbar {
-            background-color: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .navbar-brand {
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .navbar-brand span {
-            color: var(--accent-teal);
-        }
-
-        .nav-link {
-            color: #E2E8F0 !important;
-            font-weight: 500;
-            margin-left: 1.5rem;
-            transition: color 0.3s ease;
-        }
-
-        .nav-link:hover,
-        .nav-link.active {
-            color: var(--accent-teal) !important;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, var(--primary-navy) 0%, #1E293B 100%);
-            color: #ffffff;
-            padding: 100px 0 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-section::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 50px;
-            background: #ffffff;
-            clip-path: polygon(0 100%, 100% 100%, 100% 0);
-        }
-
-        .btn-accent {
-            background-color: var(--accent-teal);
-            color: white;
-            font-weight: 600;
-            padding: 0.75rem 2rem;
-            border-radius: 6px;
-            border: none;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-
-        .btn-accent:hover {
-            background-color: #0284C7;
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .btn-outline-light {
-            padding: 0.75rem 2rem;
-            border-radius: 6px;
-            font-weight: 600;
-        }
-
-        /* Section Global Settings */
-        section {
-            padding: 90px 0;
-        }
-
-        .section-title {
-            font-weight: 700;
-            color: var(--primary-navy);
-            position: relative;
-            margin-bottom: 3rem;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background-color: var(--accent-teal);
-        }
-
-        .bg-light-section {
-            background-color: var(--light-bg);
-        }
-
-        /* Feature & Service Cards */
-        .custom-card {
-            background: #ffffff;
-            border: 1px solid #E2E8F0;
-            border-radius: 8px;
-            padding: 2.5rem 2rem;
-            height: 100%;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .custom-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
-            border-color: var(--accent-teal);
-        }
-
-        .card-icon {
-            font-size: 2.5rem;
-            color: var(--accent-teal);
-            margin-bottom: 1.5rem;
-        }
-
-        /* Contact Section styling */
-        .contact-info-box {
-            background-color: var(--primary-navy);
-            color: white;
-            border-radius: 8px;
-            padding: 3rem;
-        }
-
-        .form-control {
-            padding: 0.75rem 1rem;
-            border-color: #CBD5E1;
-        }
-
-        .form-control:focus {
-            border-color: var(--accent-teal);
-            box-shadow: 0 0 0 0.25rem rgba(14, 165, 233, 0.25);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--primary-navy);
-            color: #94A3B8;
-            padding: 40px 0;
-            border-top: 1px solid #1E293B;
-        }
-    </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="100">
@@ -199,6 +41,7 @@
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#why-choose-us">Why Choose Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="solutions.html">Our Solutions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a
                             class="nav-link btn btn-accent text-white px-3 py-1 ms-lg-4 d-inline-block mt-2 mt-lg-0"
                             href="#contact">Contact Us</a></li>
@@ -223,7 +66,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 text-center d-none d-lg-block">
-                    <img src="comp.png" alt="computer">
+                    <img src="comp.png" alt="computer" class="hero-image">
                 </div>
             </div>
         </div>
@@ -393,6 +236,7 @@
                                         <option>Business Automation / SaaS</option>
                                         <option>API & Payment Integration</option>
                                         <option>Other / General Consultation</option>
+                                        <option>Simple Landing Page</option>
                                     </select>
                                 </div>
                                 <div class="col-12">
@@ -419,7 +263,7 @@
                         let focus = document.getElementById('focus').value;
                         let overview = document.getElementById('overview').value;
 
-                        let yourNumber = '254700539097';
+                        let yourNumber = '254702990660';
 
                         let message = `*New Inquiry - Anchor Solutions*%0A%0A` +
                             `*Name:* ${name}%0A` +
@@ -438,7 +282,7 @@
         </div>
     </section>
 
-    <div style="position: fixed; right: 14px; bottom: 100px;"><a href="https://wa.me/+254740090986" target="_blank"><svg
+    <div style="position: fixed; right: 14px; bottom: 100px;"><a href="https://wa.me/+254702990660" target="_blank"><svg
                 xmlns="http://www.w3.org/2000/svg" height="70" width="70"
                 viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                 <path fill="rgb(98, 215, 72)"
@@ -447,11 +291,56 @@
     </div>
 
     <!-- FOOTER -->
-    <footer>
-        <div class="container text-center text-md-between d-md-flex align-items-center justify-content-between">
-            <p class="mb-2 mb-md-0">&copy; 2026 Anchor Solutions. All rights reserved.</p>
-            <div class="d-flex gap-3 justify-content-center">
-                <span class="text-light opacity-50">Engineered for Scalability</span>
+    <footer class="custom-footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-heading mb-3">AnchorSolutions</h5>
+                    <p class="small text-white-50">Engineered for Scalability</p>
+                    <ul class="list-unstyled social-icons-container">
+                        <a href="https://www.tiktok.com/" target="_blank"><i
+                                class="fa-brands fa-tiktok fa social-icon"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i
+                                class="fa-brands fa-facebook fa social-icon"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i
+                                class="fa-brands fa-instagram fa social-icon"></i></a>
+                        <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter fa social-icon"></i></a>
+                        <a href="https://www.linkedin.com/feed/" target="_blank"><i
+                                class="fa-brands fa-linkedin fa social-icon"></i></a>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 offset-lg-1">
+                    <h5 class="footer-heading mb-3">Quick Links</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="#" class="footer-link">Home Portfolio</a></li>
+                        <li><a href="#about" class="footer-link">About Us</a></li>
+                        <li><a href="/solutions.html" class="footer-link">Our Projects</a></li>
+                        <li><a href="/pricing.html" class="footer-link">Pricing Options</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-heading mb-3">Business Center</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small text-white-50">
+                        <li><span class="text-white">Hours:</span> Mon - Fri, 9:00 AM - 5:00 PM</li>
+                        <li><span class="text-white">Inquiries:</span> info@anchorsolutions.co.ke</li>
+                        <li><span class="text-white">Payments:</span> Secure via Till Number</li>
+                        <li><span class="text-white">Contact:</span> 254702990660</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="my-4 border-secondary opacity-25">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small text-white-50 mb-0">&copy; 2026 Anchor Solutions. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+                    <a href="#" class="footer-link small me-3">Privacy Policy</a>
+                    <a href="#" class="footer-link small">Terms of Provision</a>
+                </div>
             </div>
         </div>
     </footer>

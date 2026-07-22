@@ -13,125 +13,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
-    <style>
-        :root {
-            --primary-navy: #0F172A;
-            --secondary-slate: #334155;
-            --accent-teal: #0EA5E9;
-            --light-bg: #F8FAFC;
-        }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--secondary-slate);
-            background-color: #ffffff;
-            padding-top: 80px;
-            /* Space for fixed navbar */
-        }
-
-        /* Navbar Styling */
-        .navbar {
-            background-color: var(--primary-navy);
-        }
-
-        .navbar-brand {
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .navbar-brand span {
-            color: var(--accent-teal);
-        }
-
-        .nav-link {
-            color: #E2E8F0 !important;
-            font-weight: 500;
-            margin-left: 1.5rem;
-        }
-
-        .nav-link:hover,
-        .nav-link.active {
-            color: var(--accent-teal) !important;
-        }
-
-        .btn-accent {
-            background-color: var(--accent-teal);
-            color: white;
-            font-weight: 600;
-            border: none;
-        }
-
-        .btn-accent:hover {
-            background-color: #0284C7;
-            color: white;
-        }
-
-        /* Header block */
-        .page-header {
-            background: transparent;
-            /* Removes the large background container color */
-            padding: 40px 0 20px 0;
-            /* Tighter padding for a cleaner look */
-            margin-bottom: 40px;
-        }
-
-        /* UPDATE THIS BLOCK IN YOUR CSS */
-        .header-badge {
-            display: inline-block;
-            background-color: #4c4f53;
-            /* Swapped to a crisp, professional dark slate/gray */
-            color: #ffffff;
-            /* High-contrast crisp white text */
-            padding: 0.6rem 1.5rem;
-            border-radius: 8px;
-            font-size: 2rem;
-            font-weight: 700;
-            border: 1px solid #475569;
-            /* Soft gray border line for extra structural definition */
-            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
-        }
-
-        /* Project Cards */
-        .project-card {
-            background: #ffffff;
-            border: 1px solid #E2E8F0;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin-bottom: 40px;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(15, 23, 42, 0.08);
-        }
-
-        .tech-badge {
-            background-color: #F1F5F9;
-            color: var(--secondary-slate);
-            font-size: 0.85rem;
-            font-weight: 500;
-            padding: 0.4rem 0.8rem;
-            border-radius: 6px;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-            display: inline-block;
-        }
-
-        .feature-list i {
-            color: var(--accent-teal);
-            margin-right: 10px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--primary-navy);
-            color: #94A3B8;
-            padding: 40px 0;
-            margin-top: 80px;
-        }
-    </style>
 </head>
 
 <body>
@@ -139,7 +23,7 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="index.html#home">
+            <a class="navbar-brand" href="/index.html">
                 <i class="fa-solid fa-anchor me-2 text-info"></i>Anchor<span>Solutions</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -152,6 +36,7 @@
                     <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#why-choose-us">Why Choose Us</a></li>
                     <li class="nav-item"><a class="nav-link active" href="solutions.html">Our Solutions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a
                             class="nav-link btn btn-accent text-white px-3 py-1 ms-lg-4 d-inline-block mt-2 mt-lg-0"
                             href="index.html#contact">Contact Us</a></li>
@@ -162,7 +47,7 @@
 
     <!-- PAGE HEADER -->
     <div class="page-header">
-        <div class="container header-badge">
+        <div class="container-fluid header-badge mt-4">
             <h1 class="fw-bold">Our Solutions & Case Studies</h1>
             <p class="lead mb-0">Explore production-grade software engineered to solve operational
                 bottlenecks and anchor commercial growth.</p>
@@ -202,7 +87,7 @@
                         <span class="tech-badge">SQLAlchemy</span>
                     </div>
                 </div>
-                <div class="col-lg-5 text-center bg-light p-5 rounded-3 border">
+                <div class="col-lg-5 text-center bg-primary-subtle p-5 rounded-3 border">
                     <i class="fa-solid fa-building-user text-muted opacity-50" style="font-size: 8rem;"></i>
                     <h4 class="mt-3 fw-bold text-dark">kodiAuto</h4>
                     <p class="small text-muted">A Case Study in Operational Automation</p>
@@ -239,7 +124,7 @@
                         <span class="tech-badge">JSON Exporters</span>
                     </div>
                 </div>
-                <div class="col-lg-5 text-center bg-light p-5 rounded-3 border order-lg-2">
+                <div class="col-lg-5 text-center bg-success-subtle p-5 rounded-3 border order-lg-2">
                     <i class="fa-solid fa-calculator text-muted opacity-50" style="font-size: 8rem;"></i>
                     <h4 class="mt-3 fw-bold text-dark">PayScale Engine</h4>
                     <p class="small text-muted">Localized Regulatory Compliance Integration</p>
@@ -278,7 +163,7 @@
                         <span class="tech-badge">SEO Optimization</span>
                     </div>
                 </div>
-                <div class="col-lg-5 text-center bg-light p-5 rounded-3 border">
+                <div class="col-lg-5 text-center bg-warning-subtle p-5 rounded-3 border">
                     <i class="fa-solid fa-store text-muted opacity-50" style="font-size: 8rem;"></i>
                     <h4 class="mt-3 fw-bold text-dark">Dida Snacks Portal</h4>
                     <p class="small text-muted">High-Performance Brand Optimization</p>
@@ -288,12 +173,66 @@
 
     </div>
 
+    <div style="position: fixed; right: 14px; bottom: 100px;"><a href="https://wa.me/254702990660" target="_blank"><svg
+                xmlns="http://www.w3.org/2000/svg" height="70" width="70"
+                viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path fill="rgb(98, 215, 72)"
+                    d="M188.1 318.6C188.1 343.5 195.1 367.8 208.3 388.7L211.4 393.7L198.1 442.3L248 429.2L252.8 432.1C273 444.1 296.2 450.5 319.9 450.5L320 450.5C392.6 450.5 453.3 391.4 453.3 318.7C453.3 283.5 438.1 250.4 413.2 225.5C388.2 200.5 355.2 186.8 320 186.8C247.3 186.8 188.2 245.9 188.1 318.6zM370.8 394C358.2 395.9 348.4 394.9 323.3 384.1C286.5 368.2 261.5 332.6 256.4 325.4C256 324.8 255.7 324.5 255.6 324.3C253.6 321.7 239.4 302.8 239.4 283.3C239.4 264.9 248.4 255.4 252.6 251C252.9 250.7 253.1 250.5 253.3 250.2C256.9 246.2 261.2 245.2 263.9 245.2C266.5 245.2 269.2 245.2 271.5 245.3L272.3 245.3C274.6 245.3 277.5 245.3 280.4 252.1C281.6 255 283.4 259.4 285.3 263.9C288.6 271.9 292 280.2 292.6 281.5C293.6 283.5 294.3 285.8 292.9 288.4C289.5 295.2 286 298.8 283.6 301.4C280.5 304.6 279.1 306.1 281.3 310C296.6 336.3 311.9 345.4 335.2 357.1C339.2 359.1 341.5 358.8 343.8 356.1C346.1 353.5 353.7 344.5 356.3 340.6C358.9 336.6 361.6 337.3 365.2 338.6C368.8 339.9 388.3 349.5 392.3 351.5C393.1 351.9 393.8 352.2 394.4 352.5C397.2 353.9 399.1 354.8 399.9 356.1C400.8 358 400.8 366 397.5 375.2C394.2 384.5 378.4 392.9 370.8 394zM544 160C544 124.7 515.3 96 480 96L160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160zM244.1 457.9L160 480L182.5 397.8C168.6 373.8 161.3 346.5 161.3 318.5C161.4 231.1 232.5 160 319.9 160C362.3 160 402.1 176.5 432.1 206.5C462 236.5 480 276.3 480 318.7C480 406.1 407.3 477.2 319.9 477.2C293.3 477.2 267.2 470.5 244.1 457.9z" />
+            </svg></a>
+    </div>
+
+
     <!-- FOOTER -->
-    <footer>
-        <div class="container text-center text-md-between d-md-flex align-items-center justify-content-between">
-            <p class="mb-2 mb-md-0">&copy; 2026 Anchor Solutions. All rights reserved.</p>
-            <div class="d-flex gap-3 justify-content-center">
-                <span class="text-light opacity-50">Engineered for Scalability</span>
+    <footer class="custom-footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-heading mb-3">AnchorSolutions</h5>
+                    <p class="small text-white-50">Engineered for Scalability</p>
+                    <ul class="list-unstyled social-icons-container">
+                        <a href="https://www.tiktok.com/" target="_blank"><i
+                                class="fa-brands fa-tiktok fa social-icon"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i
+                                class="fa-brands fa-facebook fa social-icon"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i
+                                class="fa-brands fa-instagram fa social-icon"></i></a>
+                        <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter fa social-icon"></i></a>
+                        <a href="https://www.linkedin.com/feed/" target="_blank"><i
+                                class="fa-brands fa-linkedin fa social-icon"></i></a>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 offset-lg-1">
+                    <h5 class="footer-heading mb-3">Quick Links</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="/index.html" class="footer-link">Home Portfolio</a></li>
+                        <li><a href="index.html#about" class="footer-link">About Us</a></li>
+                        <li><a href="/solutions.html" class="footer-link">Our Projects</a></li>
+                        <li><a href="/pricing.html" class="footer-link">Pricing Options</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-heading mb-3">Business Center</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small text-white-50">
+                        <li><span class="text-white">Hours:</span> Mon - Fri, 9:00 AM - 5:00 PM</li>
+                        <li><span class="text-white">Inquiries:</span> info@anchorsolutions.com</li>
+                        <li><span class="text-white">Payments:</span> Secure via Till Number</li>
+                        <li><span class="text-white">Contact:</span> 254702990660</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="my-4 border-secondary opacity-25">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small text-white-50 mb-0">&copy; 2026 Anchor Solutions. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+                    <a href="#" class="footer-link small me-3">Privacy Policy</a>
+                    <a href="#" class="footer-link small">Terms of Provision</a>
+                </div>
             </div>
         </div>
     </footer>
